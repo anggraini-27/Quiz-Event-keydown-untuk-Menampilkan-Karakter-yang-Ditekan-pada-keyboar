@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydown Event</title>
+</head>
+<body>
+    <label for="inputField">Ketik sesuatu:</label>
+    <input type="text" id="inputField" />
+    <p id="outputParagraph">Karakter terakhir yang ditekan akan muncul di sini.</p>
+
+    <script>
+        // Ambil elemen input dan paragraf
+        const inputField = document.getElementById('inputField');
+        const outputParagraph = document.getElementById('outputParagraph');
+
+        // Tambahkan event listener untuk keydown pada input field
+        inputField.addEventListener('keydown', function(event) {
+            // Tampilkan karakter terakhir yang ditekan di paragraf
+            outputParagraph.textContent = `Karakter terakhir yang ditekan: ${event.key}`;
+        });
+    </script>
+</body>
+</html>
